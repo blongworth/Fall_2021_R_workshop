@@ -4,3 +4,69 @@ output: html_notebook
 ---
 
 # Functions
+
+```{r}
+name <- function(parameters) {
+  do some stuff
+  return(object)
+}
+```
+
+```{r}
+fahr_to_kel <- function(temp) {
+  ((temp -32) * (5/9)) + 273.15
+  
+}
+```
+
+```{r}
+fahr_to_kel(32)
+```
+
+```{r}
+kel_to_cel <- function(temp) {
+  cel <- temp - 273.15
+  cel
+}
+```
+
+```{r}
+kel_to_cel(273)
+```
+
+```{r}
+fahr_to_cel <- function(temp) {
+  if (!is.numeric(temp)) {
+    stop("temp must be a numeric vector")
+  }
+  kel <- fahr_to_kel(temp)
+  cel <- kel_to_cel(kel)
+  return(cel)
+}
+```
+```{r}
+fahr_to_cel(32)
+```
+
+```{r}
+fahr_to_cel("blue")
+```
+
+```{r}
+calcGDP <- function(pop, gdpPercap) {
+  pop * gdpPercap
+}
+```
+
+```{r}
+calcGDP(1, 1)
+```
+```{r}
+gapminder <- gap
+```
+
+```{r}
+gap_gdp <- gapminder %>% 
+  mutate(gdp = pop * gdpPercap)
+```
+
