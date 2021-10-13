@@ -1,0 +1,6 @@
+---
+title: "Functions"
+output: html_notebook
+---
+
+# Functions
